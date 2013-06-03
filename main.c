@@ -12,18 +12,19 @@ struct cell
     int status;
     int ID;
 
-}
+};
 
-void cleanup(struct cell *);
-void cell_initial(struct cell *);
+//void cleanup(struct cell *);
+//void cell_initial(struct cell *);
 
 int main(void)
 {
     int i;
     //malloc the memory of the list of cell
-    void *p;
+    struct cell matrix[256];
     //define a pointer to point the memory
-    p = (struct *)calloc(SIZE, sizeof(struct cell));
+    void *p;
+    p = &matrix[0];
 
     return 0;
 
