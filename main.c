@@ -3,6 +3,7 @@
 #define isActived 1
 #define isPredicted 2
 #define SIZE 16 * 16
+#define LAYER 1
 
 //The initial of cell
 struct cell
@@ -15,18 +16,35 @@ struct cell
 };
 
 //void cleanup(struct cell *);
-//void cell_initial(struct cell *);
+void cell_initial(struct cell *);
 
 int main(void)
 {
     int i;
     //malloc the memory of the list of cell
-    struct cell matrix[256];
+    struct cell matrix[SIZE];
     //define a pointer to point the memory
-    void *p;
+    struct cell *p;
+
+    p = &matrix[0]
+
+    cell_initial(*p);
     p = &matrix[0];
 
-    return 0;
+}
+
+//the initial function of cell
+void cell_initial(struct cell *)
+{
+    int i;
+    for(i = 0; i < SIZE; i++)
+    {
+        *p.layer = LAYER;
+        *p.status = inActive;
+        *p.ID = i % 4;
+        *p.column = i / 4;
+        p++;
+    }
 
 
 }
