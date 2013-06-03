@@ -1,14 +1,17 @@
 #include <stdio.h>
+#define inActive 0
+#define isActived 1
+#define isPredicted 2
+#define SIZE 16 * 16
 
 //The initial of cell
 struct cell
 {
     int layer;
     int column;
-    int value;
-    int status[2];
+    int status;
     int ID;
-        
+
 }
 
 void cleanup(struct cell *);
@@ -18,15 +21,12 @@ int main(void)
 {
     int i;
     //malloc the memory of the list of cell
-    struct cell *p;
+    void *p;
     //define a pointer to point the memory
-    *p = (struct *)calloc(16 * 16 * strlen(cell));
-    for(i = 0;i < 256; i++)
-    {
-        cell_initial(*p);
-    }
+    p = (struct *)calloc(SIZE, sizeof(struct cell));
+
     return 0;
-    
-    
+
+
 }
 
