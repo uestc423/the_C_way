@@ -22,13 +22,21 @@ void show_cell_status(pMatrix);
 
 int main(void)
 {
+<<<<<<< HEAD
     //define a pointer;
     pMatrix p;
     //set a 16 * 16 memory
     p = (pMatrix)malloc(SIZE * sizeof(Matrix));
+=======
+    //define a struct cell pointer
+    struct cell * matrix;
+    //malloc a memory
 
-    cell_initial(p);
-    show_cell_status(p);
+    matrix = (struct cell *)malloc(SIZE * sizeof(struct cell));
+>>>>>>> f39ecf766464acd001e4d1e9af37ce6c819b6434
+
+    cell_initial(matrix);
+    show_cell_status(matrix);
     return 0;
 }
 
