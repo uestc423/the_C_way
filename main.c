@@ -1,9 +1,10 @@
+
 #include <stdio.h>
-#define inActive 0
-#define isActived 1
-#define isPredicted 2
+#define INACTIVE 0
+#define ISACTIVED 1
+#define ISPREDICTED 2
 #define SIZE 16 * 16
-#define LAYER 1
+#define FIRST 1
 
 //The initial of cell
 struct cell
@@ -26,24 +27,23 @@ int main(void)
     //define a pointer to point the memory
     struct cell *p;
 
-    p = &matrix[0]
-
-    cell_initial(*p);
     p = &matrix[0];
+
+    cell_initial(p);
 
 }
 
 //the initial function of cell
-void cell_initial(struct cell *)
+void cell_initial(struct cell * ptr)
 {
     int i;
     for(i = 0; i < SIZE; i++)
     {
-        *p.layer = LAYER;
-        *p.status = inActive;
-        *p.ID = i % 4;
-        *p.column = i / 4;
-        p++;
+        ptr->layer = FIRST;
+        ptr->status = INACTIVE;
+        ptr->ID = i % 4;
+        ptr->column = i / 4;
+        ptr++;
     }
 
 
