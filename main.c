@@ -25,10 +25,11 @@ int main(void)
 
     //define a pointer;
     pMatrix p;
+
     //set a 16 * 16 memory
     p = (pMatrix)malloc(SIZE * sizeof(Matrix));
-    cell_initial(matrix);
-    show_cell_status(matrix);
+    cell_initial(p);
+    show_cell_status(p);
     return 0;
 }
 
