@@ -18,6 +18,7 @@ struct cell
 
 //void cleanup(struct cell *);
 void cell_initial(struct cell *);
+void show_cell_status(struct cell *);
 
 int main(void)
 {
@@ -30,7 +31,8 @@ int main(void)
     p = &matrix[0];
 
     cell_initial(p);
-
+    show_cell_status(p);
+    return 0;
 }
 
 //the initial function of cell
@@ -49,3 +51,16 @@ void cell_initial(struct cell * ptr)
 
 }
 
+void show_cell_status(struct cell * ptr)
+{
+    int i;
+    for(i = 0; i < SIZE; i++)
+    {
+        printf("The cell's value = layer: %d, status: %d, ID: %d, column:%d\n",
+               ptr->layer,
+               ptr->status,
+               ptr->ID,
+               ptr->column);
+        ptr++;
+    }
+}
