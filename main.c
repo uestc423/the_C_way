@@ -1,5 +1,3 @@
-
-
 #include <stdio.h>
 #define INACTIVE 0
 #define ISACTIVED 1
@@ -23,16 +21,14 @@ void show_cell_status(struct cell *);
 
 int main(void)
 {
-    int i;
-    //malloc the memory of the list of cell
-    struct cell matrix[SIZE];
-    //define a pointer to point the memory
-    struct cell *p;
+    //define a struct cell pointer
+    struct cell * matrix;
+    //malloc a memory
 
-    p = &matrix[0];
+    matrix = (struct cell *)malloc(SIZE * sizeof(struct cell));
 
-    cell_initial(p);
-    show_cell_status(p);
+    cell_initial(matrix);
+    show_cell_status(matrix);
     return 0;
 }
 
