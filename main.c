@@ -27,8 +27,10 @@ int main(void)
 
     //define a pointer;
     pMatrix p;
+
     //set a 16 * 16 memory
     p = (pMatrix)malloc(SIZE * sizeof(Matrix));
+<<<<<<< HEAD
     if(p)                        //evaluate the pointer is exist
     {
         cell_initial(p);
@@ -38,6 +40,10 @@ int main(void)
     {
         printf("memory is null");
     }
+=======
+    cell_initial(p);
+    show_cell_status(p);
+>>>>>>> e844f477293fabc8e6f024c011d2a97c2758b5dd
     return 0;
 }
 
