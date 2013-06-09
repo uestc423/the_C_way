@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 #define INACTIVE 0
 #define ISACTIVED 1
@@ -9,10 +10,11 @@
 //The initial of cell
 typedef struct cell
 {
-    int layer;
-    int column;
-    int status;
-    int ID;
+    int layer;                        //layer declaration
+    int column;                       //column declaration
+    int status;                       //status declaration
+    int id;
+    int connector_cell_id;
 
 }Matrix, *pMatrix;
 
@@ -43,7 +45,8 @@ void cell_initial(pMatrix ptr)
     {
         ptr->layer = FIRST;
         ptr->status = INACTIVE;
-        ptr->ID = i % 4;
+        ptr->id = i % 4;
+        ptr->connector_cell_id = 0;
         ptr->column = i / 4;
         ptr++;
     }
@@ -56,10 +59,11 @@ void show_cell_status(pMatrix ptr)
     int i;
     for(i = 0; i < SIZE; i++)
     {
-        printf("The cell's value = layer: %d, status: %d, ID: %d, column:%d\n",
+        printf("The cell's value = layer: %d, status: %d, ID: %d, CCI: %d column:%d\n",
                ptr->layer,
                ptr->status,
-               ptr->ID,
+               ptr->id,
+               ptr->connector_cell_id,
                ptr->column);
         ptr++;
     }
