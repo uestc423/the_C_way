@@ -1,26 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "main.h"
 
 #define INACTIVE 0
 #define ISACTIVED 1
 #define ISPREDICTED 2
-#define SIZE 16 * 16
+#define SIZE 1600 * 1600
 #define FIRST 1
 
-//The initial of cell
-typedef struct cell
-{
-    int layer;                        //layer declaration
-    int column;                       //column declaration
-    int status;                       //status declaration
-    int id;
-    int connector_cell_id;
 
-}Matrix, *pMatrix;
-
-//void cleanup(struct cell *);
-void cell_initial(pMatrix);
-void show_cell_status(pMatrix);
 
 int main(void)
 {
@@ -28,10 +16,19 @@ int main(void)
     //define a pointer;
     pMatrix p;
 
-    //set a 16 * 16 memory
+    //set  memory
     p = (pMatrix)malloc(SIZE * sizeof(Matrix));
-    cell_initial(p);
-    show_cell_status(p);
+    //pointer evaluation
+    if (p)
+    {
+        cell_initial(p);
+        
+        //show_cell_status(p);
+    }
+    else
+    {
+        printf("Pointer is null!\n");
+    }
     return 0;
 }
 
