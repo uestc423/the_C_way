@@ -5,7 +5,7 @@
 #define INACTIVE 0
 #define ISACTIVED 1
 #define ISPREDICTED 2
-#define SIZE 1600 * 1600
+#define SIZE 16000 * 16000
 #define FIRST 1
 
 
