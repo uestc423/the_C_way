@@ -18,30 +18,18 @@ int main(void)
 
     //set  memory
     p = (pMatrix)malloc(SIZE * sizeof(Matrix));
-<<<<<<< HEAD
-    printf("%u", p);
-=======
->>>>>>> e34ca618ee6978556d0a90a80b508133e96d83cf
+
     //pointer evaluation
     if (p)
     {
         cell_initial(p);
-<<<<<<< HEAD
-
-
-=======
-        
->>>>>>> e34ca618ee6978556d0a90a80b508133e96d83cf
         //show_cell_status(p);
     }
     else
     {
         printf("Pointer is null!\n");
     }
-<<<<<<< HEAD
 
-=======
->>>>>>> e34ca618ee6978556d0a90a80b508133e96d83cf
     return 0;
 }
 
