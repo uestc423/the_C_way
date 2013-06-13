@@ -10,7 +10,7 @@ typedef struct cell
     int id;
     int connector_cell_id;
 
-    }Matrix, *pMatrix;
+}Matrix, *pMatrix;
 
 extern void cell_initial(pMatrix p);
 extern void show_cell_status(pMatrix p);
