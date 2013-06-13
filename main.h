@@ -12,6 +12,6 @@ typedef struct cell
 
     }Matrix, *pMatrix;
 
-    void cell_initial(pMatrix p);
-    void show_cell_status(pMatrix p);
+extern void cell_initial(pMatrix p);
+extern void show_cell_status(pMatrix p);
 #endif
