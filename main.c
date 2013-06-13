@@ -29,7 +29,7 @@ int main(void)
     {
         printf("Pointer is null!\n");
     }
-
+    free(p);
     return 0;
 }
 

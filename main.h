@@ -9,9 +9,9 @@ typedef struct cell
     int status;                       //status declaration
     int id;
     int connector_cell_id;
-    
+
     }Matrix, *pMatrix;
-    
-    extern void cell_initial(pMatrix p);
-    extern void show_cell_status(pMatrix p);
+
+    void cell_initial(pMatrix p);
+    void show_cell_status(pMatrix p);
 #endif
