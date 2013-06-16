@@ -44,7 +44,6 @@ void cell_initial(pMatrix ptr)
         ptr->layer = FIRST;
         ptr->status = INACTIVE;
         ptr->id = i % 4;
-        ptr->connector_cell_id = 0;
         ptr->column = i / 4;
         ptr++;
     }
@@ -57,11 +56,10 @@ void show_cell_status(pMatrix ptr)
     int i;
     for(i = 0; i < SIZE; i++)
     {
-        printf("The cell's value = layer: %d, status: %d, ID: %d, CCI: %d column:%d\n",
+        printf("The cell's value = layer: %d, status: %d, ID: %d, column:%d\n",
                ptr->layer,
                ptr->status,
                ptr->id,
-               ptr->connector_cell_id,
                ptr->column);
         ptr++;
     }

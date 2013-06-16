@@ -2,10 +2,10 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-double randf(void)
+float randf(void)
 {
     srand(time(NULL));
-    return (double)rand()/(double)RAND_MAX;
+    return (float)rand()/(float)RAND_MAX;
 }
 
  

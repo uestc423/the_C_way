@@ -8,7 +8,6 @@ typedef struct cell
     int column;                       //column declaration
     int status;                       //status declaration
     int id;
-    int connector_cell_id;
 
 }Matrix, *pMatrix;
 

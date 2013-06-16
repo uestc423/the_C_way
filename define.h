@@ -3,6 +3,6 @@
 #include <time.h>
 #include <stdlib.h>
 
-extern double randf(void);
+extern float randf(void);
 #endif
 
