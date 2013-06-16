@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <io.h>
 
-void fopen(void);
-void fclose(void);
+extern void load(void);
+extern void save(void);
 #endif
 

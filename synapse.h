@@ -1,15 +1,24 @@
 #ifndef _SYNAPSE_H_
 #include <stdio.h>
 #include <stdlib.h>
+#include "define.h"
 
 typedef struct synapse
 {
     float weight;
-    int local_id[2];               //本地ID由columnid和cellid组成。
-    int target_id[2];              //目标ID由columnid和cellid组成。
+    int local_id[2];               
+    int target_id[2];              
 }Synapse, *pSynapse;
 
-extern Synapse_init(pSynapse);
-extern id_def(pSynapse);
+typedef struct synapse_input
+{
+    float weight;
+    int column_id;
+    int input_id : SIZE * 16;
+}Syninput, *pSynapse;
 
+extern void Synapse_init(pSynapse ptr);
+extern void sunapse_def(pSynapse ptr);
+extern void syninput_def(pSynapse ptr);
+extern void syninput_initial(pSynapse ptr);
 #endif

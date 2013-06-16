@@ -1,12 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "main.h"
-
-#define INACTIVE 0
-#define ISACTIVED 1
-#define ISPREDICTED 2
-#define SIZE 1600 * 1600
-#define FIRST 1
+#include "cell.h"
+#include "define.h"
 
 
 
