@@ -16,10 +16,10 @@ typedef struct synapse_input
     float weight;
     int column_id;
     int input_id;
-}Syninput, *pSynapse;
+}Syninput, *pSyninput;
 
 extern void Synapse_init(pSynapse ptr);
 extern void sunapse_def(pSynapse ptr);
-extern void syninput_def(pSynapse ptr);
-extern void syninput_initial(pSynapse ptr);
+extern void syninput_def(pSyninput ptr);
+extern void syninput_initial(pSyninput ptr);
 #endif

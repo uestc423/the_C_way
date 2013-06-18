@@ -1,5 +1,6 @@
 #ifndef _DEFINE_H_
 #define _DEFINE_H_
+
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
