@@ -1,4 +1,5 @@
-#ifndef _MAIN_H_
+#ifndef _CELL_H_
+#define _CELL_H_
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -11,6 +12,6 @@ typedef struct cell
 
 }Matrix, *pMatrix;
 
-extern void cell_initial(pMatrix p);
-extern void show_cell_status(pMatrix p);
+void cell_initial(pMatrix p);
+void show_cell_status(pMatrix p);
 #endif

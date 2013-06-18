@@ -2,8 +2,7 @@
 #include <stdlib.h>
 #include "dendrite.h"
 #include "define.h"
-#define DPN SIZE / 4
-#define DDN SIZE * 4
+
 
 void proximal_initial(pDenproximal ptr)
 {
@@ -30,4 +29,5 @@ void distal_initial(pDendistal ptr)
 
     }
 }
+
 

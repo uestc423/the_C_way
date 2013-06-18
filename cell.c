@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include "cell.h"
 #include "define.h"
+#include "dendrite.h"
 
 
 
@@ -9,22 +10,31 @@ int main(void)
 {
 
     //define a pointer;
-    pMatrix p;
+    pMatrix cell;
+    pDenproximal proximal;
+    pDendistal distal;
+
 
     //set  memory
-    p = (pMatrix)malloc(SIZE * sizeof(Matrix));
+    cell = (pMatrix)malloc(SIZE * sizeof(Matrix));
+    proximal = (pDenproximal)malloc(DPN * sizeof(Denproximal));
+    distal = (pDendistal)malloc(DDN * sizeof(Dendistal));
+
 
     //pointer evaluation
-    if (p)
+    if (cell && proximal && distal)
     {
-        cell_initial(p);
+        cell_initial(cell);
+        proximal_initial(proximal);
+        distal_initial(distal);
         //show_cell_status(p);
     }
     else
     {
         printf("Pointer is null!\n");
+        exit(1);
     }
-    free(p);
+    //free(p);
     return 0;
 }
 
@@ -59,3 +69,4 @@ void show_cell_status(pMatrix ptr)
         ptr++;
     }
 }
+

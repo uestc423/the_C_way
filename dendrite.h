@@ -1,4 +1,5 @@
 #ifndef _DENDRITE_H_
+#define _DENDRITE_H_
 #include <stdio.h>
 
 typedef struct denproximal
@@ -14,4 +15,7 @@ typedef struct dendistal
     int boost;
     int cell_id[2];
 }Dendistal, *pDendistal;
+
+extern void proximal_initial(pDenproximal ptr);
+extern void distal_initial(pDendistal ptr);
 #endif

@@ -3,6 +3,10 @@
 #include <time.h>
 #include <stdlib.h>
 #define SIZE 1600 * 1600
+#define DPN SIZE / 4
+#define DDN SIZE * 4
+
+
 #define INACTIVE 0
 #define ISACTIVED 1
 #define ISPREDICTED 2
